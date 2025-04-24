@@ -10,7 +10,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false)
 
   // Reemplaza esto con tu API key de WeatherAPI.com
-  const API_KEY = process.env.WEATHER_API_KEY || ""
+  const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || ""
 
   const consultarClima = async () => {
     if (!localidad) return
