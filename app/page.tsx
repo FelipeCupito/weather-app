@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useEasterEggs } from "./hooks/useEasterEggs";
 
 export default function Home() {
   const [location, setLocation] = useState("")
@@ -8,6 +9,7 @@ export default function Home() {
   const [condition, setCondition] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
+  const { titleRef } = useEasterEggs(); 
 
   const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY || ""
 
@@ -41,7 +43,8 @@ export default function Home() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Weather Checker</h1>
+      {/* <h1>Weather Checker</h1> */}
+      <h1 ref={titleRef}>Weather Checker</h1>
 
       <div>
         <label htmlFor="txtLocation">Location: </label>
