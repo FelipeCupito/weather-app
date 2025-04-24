@@ -1,0 +1,9 @@
+/* Estilos mínimos si decides mantener este archivo */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
